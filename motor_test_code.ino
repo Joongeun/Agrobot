@@ -3,6 +3,11 @@
  * Spins both motors forward at 75% duty cycle.
  */
 
+// TOUCH1_GPIO1_A0_D0 is connected to AIN1
+// TOUCH2_GPIO2_A1_D1 is connected to AIN2
+// TOUCH3_GPIO3_A2_D2 is connected to BIN2
+// TOUCH4_GPIO4_A3_D3 is connected to BIN1
+
 // Left Motor (Channel A)
 const int AIN1 = 1; // D0
 const int AIN2 = 2; // D1
@@ -27,7 +32,7 @@ void loop() {
   analogWrite(AIN2, 0);
 
   // --- Spin Right Motor Forward ---
-  // Based on your wiring: BIN1 is connected to D3, BIN2 to D2
+  // BIN1 is connected to D3, BIN2 to D2
   analogWrite(BIN1, motorSpeed);
   analogWrite(BIN2, 0);
 
